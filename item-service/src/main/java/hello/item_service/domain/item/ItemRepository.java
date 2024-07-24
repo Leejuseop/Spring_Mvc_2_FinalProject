@@ -27,7 +27,7 @@ public class ItemRepository {
         return new ArrayList<>(store.values());
     }
 
-    public void update(Long itemId, Item updateParam){ // (수정할 기존 아이템, 수정될 정보가 담긴 아이템)
+    public void update(Long itemId, Item updateParam){ // (수정할 기존 아이템아이디, 수정될 정보가 담긴 아이템)
         Item findItem = store.get(itemId);
         findItem.setItemName(updateParam.getItemName());
         findItem.setPrice(updateParam.getPrice());

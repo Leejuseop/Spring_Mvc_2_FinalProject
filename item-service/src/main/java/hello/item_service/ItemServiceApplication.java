@@ -8,7 +8,14 @@ public class ItemServiceApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ItemServiceApplication.class, args);
-		// 상품등록처리 - @ModelAttribute 부터 보면됨
+		// PRG 그거부터 보면됨
+		/*
+		상품 수정페이지에서 데이터 입력하고 저장 누르면 redirect되서 그 경로로 가야된단 말이야 그리고 실제로 데이터도 잘 넘어가지는데 
+		문제는 이게 코드스페이스라서 경로가 그지같아 넘어가서 없는 페이지url을 넘겨줘 이거 어케 할지 모르게따 항상 redirect만 쓰면 이러는데
+		구글링해봐도 안나옴 어카지 ;;; 그래서 일단 원래 저장 누르면 그 수정된 상태의 상품 상세페이지로 넘어가야되는데
+		그냥 목록으로 넘어가게 해놨음 ㅇㅋ?
+		*/ 
+
 	}
 
 }
