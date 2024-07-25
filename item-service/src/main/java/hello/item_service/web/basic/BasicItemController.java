@@ -80,13 +80,37 @@ public class BasicItemController {
         return "basic/item";
     }
 
-    @PostMapping("/add")
-    public String addItemV2(@ModelAttribute("item") Item item){
+    //@PostMapping("/add")
+    public String addItemV2(@ModelAttribute("item") Item item, Model model){
         itemRepository.save(item);
 
-        //model.addAttribute("item", item); 이것도 @ModelAttribute가 다 해줌 대박이지
+        model.addAttribute("item", item);
 
         return "basic/item";
+    }
+
+    //@PostMapping("/add")
+    public String addItemV3(@ModelAttribute Item item){
+        itemRepository.save(item);
+
+        return "basic/item";
+    }
+
+    //@PostMapping("/add")
+    public String addItemV4(Item item){
+        itemRepository.save(item);
+        return "basic/item";
+    }
+
+    @PostMapping("/add")
+    public String addItemV5(Item item, Model model){
+        itemRepository.save(item);
+
+        List<Item> items = itemRepository.findAll();
+        
+        model.addAttribute("items", items);
+
+        return "/basic/items";
     }
 
     @GetMapping("/{itemId}/edit")
